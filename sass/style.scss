@@ -1,0 +1,457 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap");
+
+$black: #2c2c54;
+$orange: #ff9f1a;
+
+* {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  text-transform: capitalize;
+  transition: all linear 0.4s;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+img {
+  vertical-align: middle;
+}
+html {
+  font-size: 65.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 6rem;
+  scroll-behavior: smooth;
+  @media (max-width: 768px) {
+    font-size: 55%;
+  }
+}
+section {
+  padding: 2rem 9%;
+  @media (max-width: 768px) {
+    padding: 2rem;
+  }
+}
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  border: 0.2rem solid $black;
+  font-weight: bolder;
+  font-size: 1.7rem;
+  color: $black;
+  cursor: pointer;
+  background: #fff;
+  padding: 0.8rem 3rem;
+  &:hover {
+    color: #fff;
+    background: $orange;
+  }
+}
+.heading {
+  text-align: center;
+  text-transform: uppercase;
+  color: $black;
+  font-size: 4rem;
+  padding: 1rem;
+  span {
+    text-transform: uppercase;
+    color: $orange;
+  }
+  @media (max-width: 400px) {
+    font-size: 3rem;
+  }
+}
+
+/*** ================== 
+Common Css ============= ***/
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #fff;
+  padding: 2rem 9%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  .logo {
+    font-size: 2.5rem;
+    color: $black;
+  }
+  .navbar {
+    @media (max-width: 768px) {
+      position: absolute;
+      top: 100%;
+      left: -120%;
+      width: 100%;
+      background: #eee;
+      border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+    }
+    a {
+      font-size: 1.7rem;
+      color: $black;
+      margin: 0 1rem;
+      &:hover {
+        color: $orange;
+      }
+      @media (max-width: 768px) {
+        font-size: 2rem;
+        background: #fff;
+        border: 0.1rem solid $black;
+        border-radius: 0.5rem;
+        padding: 1.5rem;
+        margin: 1.5rem;
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+  .icons {
+    a {
+      font-size: 2.5rem;
+      color: $black;
+      margin-left: 1.5rem;
+      &:hover {
+        color: $orange;
+      }
+    }
+  }
+  #menu-bar {
+    font-size: 2.5rem;
+    padding: 0.5rem 1.5rem;
+    border: 0.1rem solid $black;
+    color: $black;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    display: none;
+    @media (max-width: 768px) {
+      display: block;
+    }
+  }
+  .navbar.active {
+    left: 0;
+  }
+}
+
+/*** ================== 
+Header Css End ============= ***/
+
+.home {
+  padding: 0;
+  position: relative;
+  .slide-container {
+    display: none;
+    &:nth-child(1) .slide {
+      background: url(../img/home-bg-1.jpg) no-repeat center / cover;
+    }
+    &:nth-child(2) .slide {
+      background: url(../img/home-bg-2.jpg) no-repeat center / cover;
+    }
+    &:nth-child(3) .slide {
+      background: url(../img/home-bg-3.jpg) no-repeat center / cover;
+    }
+    .slide {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      padding: 0 9%;
+      padding-top: 9rem;
+      .content {
+        flex: 1 1 40rem;
+        animation: slidecontent 0.5s linear 1s backwards;
+        @keyframes slidecontent {
+          0% {
+            opacity: 0;
+            transform: translateX(-10rem);
+          }
+        }
+        span {
+          color: $orange;
+          font-size: 2rem;
+        }
+        h3 {
+          color: $black;
+          font-size: 5rem;
+        }
+        p {
+          color: #666;
+          font-size: 1.7rem;
+          padding: 0.5rem 0;
+        }
+      }
+      .image {
+        flex: 1 1 50rem;
+        padding-bottom: 15rem;
+        position: relative;
+        z-index: 0;
+        @media (max-width: 992px) {
+          padding-bottom: 11rem;
+        }
+        @media (min-width: 320px) and (max-width: 500px) {
+          margin-top: 3rem;
+        }
+        .shoe {
+          width: 100%;
+          transform: rotate(-35deg);
+          animation: shoe 0.4s linear;
+          @keyframes shoe {
+            0% {
+              transform: rotate(0deg) scale(0.5);
+            }
+          }
+        }
+        .text {
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          animation: textcontent 0.5s linear 0.5s backwards;
+          @keyframes textcontent {
+            0% {
+              opacity: 0;
+              top: -10rem;
+            }
+          }
+          @media (max-width: 768px) {
+            width: 60%;
+          }
+        }
+      }
+    }
+  }
+  .slide-container.active {
+    display: block;
+  }
+  #prev,
+  #next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    z-index: 100;
+    height: 5rem;
+    width: 5rem;
+    line-height: 4.5rem;
+    font-size: 2rem;
+    color: $black;
+    border: 0.2rem solid $black;
+    cursor: pointer;
+    text-align: center;
+    &:hover {
+      color: #fff;
+      background: $orange;
+    }
+    @media (max-width: 991px) {
+      top: 85%;
+    }
+    @media (max-width: 768px) {
+      top: 85%;
+    }
+  }
+  #prev {
+    left: 3rem;
+  }
+  #next {
+    right: 3rem;
+  }
+}
+
+/*** ================== 
+Home Css ============= ***/
+.service {
+  .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    background: #f9f9f9;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    .box {
+      text-align: center;
+      flex: 1 1 30rem;
+      i {
+        font-size: 4rem;
+        color: $orange;
+      }
+      h3 {
+        font-size: 2rem;
+        color: $black;
+        padding-top: 1rem;
+      }
+      p {
+        font-size: 1.5rem;
+        color: #666;
+        padding-top: 1rem 0;
+      }
+    }
+  }
+}
+
+/*** ================== 
+Services Css ============= ***/
+
+.products {
+  .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    .box {
+      border: 0.1rem solid rgba(0, 0, 0, 0.1);
+      border-radius: 0.5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      background: #fff;
+      flex: 1 1 30rem;
+      img {
+        height: 10rem;
+        transform: rotate(-35deg);
+        filter: drop-shadow(0 0.5rem 1rem rgba(0, 0, 0, 0.2));
+        margin: 8rem 2rem;
+      }
+      .content {
+        padding: 1.5rem;
+      }
+      &:hover img {
+        transform: rotate(-35deg) scale(1.2);
+      }
+      .icons {
+        display: flex;
+        flex-flow: column;
+        position: absolute;
+        top: 0.5rem;
+        left: -10rem;
+        a {
+          height: 4.5rem;
+          width: 5rem;
+          line-height: 4.5rem;
+          font-size: 2rem;
+          color: $black;
+          border: 0.1rem solid $black;
+          border-radius: 0.5rem;
+          background: #fff;
+          margin-top: 0.5rem;
+          &:hover {
+            background: $orange;
+            color: #fff;
+          }
+        }
+      }
+      &:hover .icons {
+        left: 1rem;
+      }
+      .content {
+        h3 {
+          color: $black;
+          font-size: 2.5rem;
+        }
+        .price {
+          color: $black;
+          font-size: 2.5rem;
+          font-weight: bolder;
+          padding: 1rem 0;
+          span {
+            color: $orange;
+            font-size: 1.5rem;
+            text-decoration: line-through;
+          }
+        }
+        .stars {
+          padding-bottom: 1rem;
+          i {
+            font-size: 1.7rem;
+            color: $orange;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*** ================== 
+Products Css ============= ***/
+.featured {
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    background: #f9f9f9;
+    padding: 2rem;
+    align-items: center;
+    margin: 1.5rem 0;
+    .image-container {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      flex: 1 1 50rem;
+      .small-image {
+        width: 20%;
+        img {
+          width: 100%;
+          padding: 1rem;
+          border: 0.1rem solid rgba(0, 0, 0, 0.3);
+          cursor: pointer;
+          &:hover {
+            background: #ccc;
+          }
+        }
+      }
+      .big-image {
+        width: 80%;
+        padding: 1rem;
+        img {
+          width: 100%;
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+    .content {
+      flex: 1 1 40rem;
+      h3 {
+        font-size: 2.5rem;
+        color: $black;
+      }
+      .stars {
+        i {
+          font-size: 1.7rem;
+          color: $orange;
+          padding: 0.5rem 0;
+        }
+      }
+      p {
+        font-size: 1.5rem;
+        color: #666;
+        padding: 1rem 0;
+      }
+      .price {
+        font-size: 2.5rem;
+        color: $black;
+        font-weight: bolder;
+        span {
+          font-size: 1.5rem;
+          color: $orange;
+          text-decoration: line-through;
+        }
+      }
+    }
+  }
+}
+
+/*** ================== 
+Featured Css ============= ***/
