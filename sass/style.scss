@@ -455,3 +455,131 @@ Products Css ============= ***/
 
 /*** ================== 
 Featured Css ============= ***/
+.review {
+  .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    background: #f9f9f9;
+    .box {
+      flex: 1 1 30rem;
+      text-align: center;
+      border: 0.1rem solid rgba(0, 0, 0, 0.1);
+      border-radius: 0.5rem;
+      background: #f9f9f9;
+      padding: 2rem;
+      img {
+        height: 15rem;
+        width: 15rem;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 1rem 0;
+      }
+      h3 {
+        font-size: 2.5rem;
+        color: $black;
+      }
+      p {
+        font-size: 1.6rem;
+        color: #666;
+        padding: 1rem 0;
+      }
+      .stars {
+        i {
+          color: $orange;
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+}
+
+/*** ================== 
+Review Css ============= ***/
+
+.newsletter {
+  padding: 0.5rem 0;
+  .content {
+    text-align: center;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    background: #f9f9f9;
+    h3 {
+      font-size: 2.5rem;
+      color: $black;
+    }
+    p {
+      font-size: 1.6rem;
+      color: #666;
+      margin: 1rem auto;
+      max-width: 60rem;
+    }
+    form {
+      margin: 1rem auto;
+      max-width: 50rem;
+      display: flex;
+      .box {
+        width: 100%;
+        font-size: 1.7rem;
+        text-transform: none;
+        color: #333;
+        padding: 1rem;
+        border: 0.2rem solid $black;
+        border-right: none;
+        margin-top: 1rem;
+      }
+      .btn {
+        border-radius: 0;
+      }
+    }
+  }
+}
+
+/*** ================== 
+Newsletter Css ============= ***/
+
+.footer {
+  .box-container {
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    background: #f9f9f9;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    .box {
+      flex: 1 1 20rem;
+      h3 {
+        color: $black;
+        font-size: 2.5rem;
+        padding-bottom: 1.5rem;
+      }
+      a {
+        color: #666;
+        font-size: 1.5rem;
+        padding-bottom: 1.5rem;
+        display: block;
+        &:hover {
+          color: $orange;
+        }
+      }
+    }
+    .credit {
+      text-align: center;
+      width: 100%;
+      border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+      font-size: 1.5rem;
+      padding: 1rem;
+      padding-top: 2rem;
+      color: #999;
+      span {
+        color: $orange;
+      }
+    }
+  }
+}
+
+/*** ================== 
+Footer Css ============= ***/

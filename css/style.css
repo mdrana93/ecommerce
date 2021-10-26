@@ -369,3 +369,103 @@ Products Css ============= ***/
 
 /*** ================== 
 Featured Css ============= ***/
+.review .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  background: #f9f9f9; }
+  .review .box-container .box {
+    flex: 1 1 30rem;
+    text-align: center;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    background: #f9f9f9;
+    padding: 2rem; }
+    .review .box-container .box img {
+      height: 15rem;
+      width: 15rem;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 1rem 0; }
+    .review .box-container .box h3 {
+      font-size: 2.5rem;
+      color: #2c2c54; }
+    .review .box-container .box p {
+      font-size: 1.6rem;
+      color: #666;
+      padding: 1rem 0; }
+    .review .box-container .box .stars i {
+      color: #ff9f1a;
+      font-size: 2.5rem; }
+
+/*** ================== 
+Review Css ============= ***/
+.newsletter {
+  padding: 0.5rem 0; }
+  .newsletter .content {
+    text-align: center;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    background: #f9f9f9; }
+    .newsletter .content h3 {
+      font-size: 2.5rem;
+      color: #2c2c54; }
+    .newsletter .content p {
+      font-size: 1.6rem;
+      color: #666;
+      margin: 1rem auto;
+      max-width: 60rem; }
+    .newsletter .content form {
+      margin: 1rem auto;
+      max-width: 50rem;
+      display: flex; }
+      .newsletter .content form .box {
+        width: 100%;
+        font-size: 1.7rem;
+        text-transform: none;
+        color: #333;
+        padding: 1rem;
+        border: 0.2rem solid #2c2c54;
+        border-right: none;
+        margin-top: 1rem; }
+      .newsletter .content form .btn {
+        border-radius: 0; }
+
+/*** ================== 
+Newsletter Css ============= ***/
+.footer .box-container {
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  background: #f9f9f9;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem; }
+  .footer .box-container .box {
+    flex: 1 1 20rem; }
+    .footer .box-container .box h3 {
+      color: #2c2c54;
+      font-size: 2.5rem;
+      padding-bottom: 1.5rem; }
+    .footer .box-container .box a {
+      color: #666;
+      font-size: 1.5rem;
+      padding-bottom: 1.5rem;
+      display: block; }
+      .footer .box-container .box a:hover {
+        color: #ff9f1a; }
+  .footer .box-container .credit {
+    text-align: center;
+    width: 100%;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+    font-size: 1.5rem;
+    padding: 1rem;
+    padding-top: 2rem;
+    color: #999; }
+    .footer .box-container .credit span {
+      color: #ff9f1a; }
+
+/*** ================== 
+Footer Css ============= ***/
